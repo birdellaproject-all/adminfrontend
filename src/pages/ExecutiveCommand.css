@@ -1,0 +1,334 @@
+/* src/pages/ExecutiveCommand.css */
+
+.exec-content-area {
+  padding: 16px 24px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.exec-loading {
+  padding: 40px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* --- Banner --- */
+.exec-banner {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.exec-banner-tag {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 10px; font-weight: 700; color: #0284c7;
+  letter-spacing: 0.5px; margin-bottom: 6px;
+}
+.exec-banner-tag .dot { width: 5px; height: 5px; background: #10b981; border-radius: 50%; }
+.exec-banner h1 { font-size: 20px; margin: 0 0 4px 0; font-weight: 700; }
+.exec-banner p { font-size: 12px; color: #64748b; margin: 0; max-width: 550px; }
+.exec-banner-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.exec-btn-secondary, .exec-btn-primary {
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px 12px; border-radius: 6px;
+  font-size: 12px; font-weight: 500; cursor: pointer;
+  border: 1px solid #cbd5e1; background: white; color: #334155;
+}
+.exec-btn-primary { background: #2563eb; color: white; border-color: #2563eb; }
+
+/* --- Filters --- */
+.exec-filters {
+  display: flex; align-items: center; gap: 16px;
+  background: white; border: 1px solid #e2e8f0;
+  border-radius: 10px; padding: 10px 20px;
+  margin-bottom: 16px; flex-wrap: wrap;
+}
+.exec-filter-group { display: flex; align-items: center; gap: 8px; }
+.exec-filter-group label { font-size: 12px; font-weight: 600; color: #334155; }
+.exec-filter-group select {
+  padding: 5px 10px; border: 1px solid #cbd5e1;
+  border-radius: 6px; font-size: 12px; background: #f8fafc; outline: none; color: #334155;
+}
+.exec-filter-right { margin-left: auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.exec-toggle { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; color: #334155; }
+
+.toggle-switch { width: 32px; height: 18px; background: #cbd5e1; border-radius: 10px; position: relative; }
+.toggle-switch.on { background: #2563eb; }
+.toggle-switch::after {
+  content: ''; position: absolute; top: 2px; left: 2px;
+  width: 14px; height: 14px; background: white; border-radius: 50%; transition: 0.2s;
+}
+.toggle-switch.on::after { left: 16px; }
+.exec-scope-tag {
+  font-size: 10px; color: #64748b; background: #f1f5f9;
+  padding: 4px 10px; border-radius: 6px; border: 1px solid #e2e8f0;
+}
+
+/* --- Top Stats Grid --- */
+.exec-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
+.exec-stat-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; }
+.exec-stat-header {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 10px; font-weight: 700; color: #64748b;
+  letter-spacing: 0.5px; margin-bottom: 10px;
+}
+.exec-stat-card h2 { font-size: 22px; font-weight: 700; margin: 0 0 6px 0; }
+.exec-stat-card p { font-size: 11px; color: #64748b; margin: 0; }
+
+.text-green { color: #16a34a; }
+.text-blue { color: #2563eb; }
+.text-yellow { color: #d97706; }
+.text-gray { color: #94a3b8; }
+
+/* --- Main Split Grid --- */
+.exec-main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: start; }
+
+.exec-panel {
+  background: white; border: 1px solid #e2e8f0;
+  border-radius: 10px; padding: 16px; margin-bottom: 16px;
+}
+.exec-panel-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 12px; flex-wrap: wrap; gap: 8px;
+}
+.exec-panel-header h3 { font-size: 14px; font-weight: 600; margin: 0 0 2px 0; }
+.exec-panel-header p { font-size: 11px; color: #64748b; margin: 0; }
+.exec-btn-link { background: none; border: none; color: #2563eb; font-size: 11px; font-weight: 600; cursor: pointer; padding: 0; }
+
+/* --- Table (Desktop View) --- */
+.exec-table-container { overflow-x: auto; width: 100%; }
+.exec-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.exec-table th {
+  text-align: left; padding: 8px 6px; border-bottom: 1px solid #e2e8f0;
+  color: #64748b; font-size: 9px; font-weight: 700; letter-spacing: 0.5px;
+}
+.exec-table td { padding: 10px 6px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+.exec-table-title { font-weight: 600; color: #0f172a; }
+.exec-table-sub { font-size: 10px; color: #64748b; }
+
+.exec-badge { padding: 2px 6px; border-radius: 10px; font-size: 9px; font-weight: 700; }
+.status-healthy { background: #dcfce7; color: #166534; }
+.status-degraded { background: #fef3c7; color: #b45309; }
+.status-warning { background: #fef3c7; color: #b45309; }
+.status-down { background: #fee2e2; color: #b91c1c; }
+
+.exec-progress-bar {
+  height: 4px; background: #e2e8f0; border-radius: 2px;
+  overflow: hidden; width: 50px; display: inline-block;
+  vertical-align: middle; margin-right: 6px;
+}
+.exec-progress-fill { height: 100%; background: #2563eb; border-radius: 2px; }
+.exec-progress-text { font-size: 10px; color: #64748b; }
+
+/* --- Module Cards --- */
+.exec-module-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.exec-module-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; }
+.exec-module-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.exec-module-header h4 { font-size: 12px; font-weight: 600; margin: 0; }
+.exec-module-card h3 { font-size: 15px; font-weight: 700; margin: 0 0 2px 0; }
+.exec-module-card p { font-size: 10px; color: #64748b; margin: 0 0 12px 0; }
+
+/* --- Right Column --- */
+.exec-command-list, .exec-control-list { display: flex; flex-direction: column; gap: 8px; }
+.exec-command-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px; border: 1px solid #e2e8f0;
+  border-radius: 8px; cursor: pointer;
+}
+.exec-priority-badge {
+  font-size: 9px; font-weight: 700; padding: 3px 6px;
+  border-radius: 4px; text-transform: uppercase;
+  width: 30px; text-align: center;
+}
+.p-p0 { background: #fee2e2; color: #b91c1c; }
+.p-p1 { background: #fef3c7; color: #b45309; }
+.p-cab { background: #e0e7ff; color: #3730a3; }
+.p-apr { background: #f1f5f9; color: #475569; }
+.exec-command-content { flex: 1; }
+.exec-command-content h4 { font-size: 11px; font-weight: 600; margin: 0 0 2px 0; }
+.exec-command-content p { font-size: 9px; color: #64748b; margin: 0; }
+.exec-badge-action { background: #fef3c7; color: #b45309; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
+.exec-control-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px; border: 1px solid #e2e8f0;
+  border-radius: 8px; cursor: pointer;
+}
+.exec-control-icon {
+  width: 24px; height: 24px; background: #f1f5f9;
+  border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #475569;
+}
+.exec-control-content { flex: 1; }
+.exec-control-content h4 { font-size: 11px; font-weight: 600; margin: 0 0 2px 0; }
+.exec-control-content p { font-size: 9px; color: #64748b; margin: 0; }
+
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .exec-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .exec-module-grid { grid-template-columns: repeat(2, 1fr); }
+  .exec-main-grid { grid-template-columns: 1fr; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .exec-content-area { padding: 12px; }
+
+  .exec-banner { flex-direction: column; padding: 14px; }
+  .exec-banner-actions { width: 100%; justify-content: space-between; margin-top: 10px; }
+  .exec-banner-actions button { flex: 1; justify-content: center; }
+  .exec-banner h1 { font-size: 18px; }
+
+  .exec-filters { flex-direction: column; align-items: stretch; padding: 12px; gap: 10px; }
+  .exec-filter-group { justify-content: space-between; }
+  .exec-filter-group select { flex: 1; max-width: 60%; }
+  .exec-filter-right { flex-direction: column; align-items: flex-start; gap: 8px; margin-left: 0; }
+  .exec-scope-tag { width: 100%; text-align: center; }
+
+  .exec-stats-grid { grid-template-columns: 1fr; gap: 12px; }
+  .exec-module-grid { grid-template-columns: 1fr; gap: 12px; }
+  .exec-main-grid { grid-template-columns: 1fr; gap: 12px; }
+
+  .exec-panel { padding: 12px; }
+  .exec-panel-header { flex-direction: column; align-items: flex-start; }
+  .exec-btn-link { align-self: flex-start; margin-top: 4px; }
+
+  /* =========================================
+     CARD VIEW FOR TABLE (The Critical Fix)
+     ========================================= */
+  
+  /* 1. Hide the original table header */
+  .exec-table thead { display: none; }
+
+  /* 2. Make the table, rows, and cells block-level */
+  .exec-table, 
+  .exec-table tbody, 
+  .exec-table tr, 
+  .exec-table td { 
+    display: block; 
+    width: 100%; 
+    box-sizing: border-box;
+  }
+
+  /* 3. Style each row as a card */
+  .exec-table tr {
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+
+  /* 4. Style each cell as a row inside the card */
+  .exec-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    text-align: right;
+    font-size: 12px;
+    color: #0f172a;
+  }
+
+  /* Remove bottom border from last cell */
+  .exec-table td:last-child { border-bottom: none; }
+
+  /* 5. Use data-label to create the left-side label */
+  .exec-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #64748b;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 16px;
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  /* 6. Special styling for the FIRST cell (Service name header of the card) */
+  .exec-table td:first-child {
+    display: block;
+    text-align: left;
+    background: #f8fafc;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .exec-table td:first-child::before { display: none; }
+  .exec-table-title { font-size: 14px; font-weight: 700; }
+  .exec-table-sub { font-size: 11px; margin-top: 2px; }
+
+  /* 7. Progress bar sizing inside the card */
+  .exec-table td .exec-progress-bar { width: 80px; margin-right: 8px; }
+}
+/* Add to the bottom of ExecutiveCommand.css */
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* --- Date Range Dropdown --- */
+.exec-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.exec-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  min-width: 140px;
+  z-index: 100;
+  padding: 4px;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.exec-dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.exec-dropdown-item:hover {
+  background: #f1f5f9;
+}
+
+.exec-dropdown-item.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
